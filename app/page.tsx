@@ -25,14 +25,14 @@ export default function Portfolio() {
       title: "Social Media Content",
       category: "Advertisement",
       image: "/Absolutecoffee.mockup.jpg",
-      description: "Mockup advertisement for Absolute Coffee shop",
+      description: "",
     },
     {
       id: 2,
-      title: "Website UI/UX Design",
-      category: "Web Design",
+      title: "Jersey and other designs",
+      category: "Clothings",
       images: ["/MyBoisJerseyConcept2.0.png","/Oasis Hoodie design mockup.png"],
-      description: "Modern and responsive website design with focus on user experience.",
+      description: "",
     },
     {
       id: 3,
@@ -67,10 +67,10 @@ export default function Portfolio() {
     const portfoliolandscape = [
     {
       id: 1,
-      title: "Brand Identity Design",
+      title: "Product Mockups",
       category: "Branding",
-      images: ["/Lemon Drink Re useable can  mockup.png","/Bothflavour.png"],
-      description: "Complete brand identity package including logo, color palette, and brand guidelines.",
+      images: ["/Product_Mockups/Orange Soda Banner1.png","/Product_Mockups/Orange Banner2.png","/Product_Mockups/Lemon Soda Banner 1.png","/Product_Mockups/2 soda can with logo.png","/Product_Mockups/Both flavour Grey BG.png"],
+      description: "",
     },
     {
       id: 2,
@@ -228,9 +228,9 @@ export default function Portfolio() {
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-6">
-            Syed
+            
             <span className="bg-gradient-to-r from-[#86eaff] to-[#86ffb9] bg-clip-text text-transparent block">
-              Yeamin
+               Syed Yeamin
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
