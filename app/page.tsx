@@ -6,6 +6,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { PortfolioCard } from '@/components/PortfolioCard';
+import { PortfolioLandscape } from '@/components/PortfolioLandscape';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, ExternalLink, Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -20,16 +22,16 @@ export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      title: "Brand Identity Design",
-      category: "Branding",
-      image: "/placeholder-zmosa.png",
-      description: "Complete brand identity package including logo, color palette, and brand guidelines.",
+      title: "Social Media Content",
+      category: "Advertisement",
+      image: "/Absolutecoffee.mockup.jpg",
+      description: "Mockup advertisement for Absolute Coffee shop",
     },
     {
       id: 2,
       title: "Website UI/UX Design",
       category: "Web Design",
-      image: "/clean-website-interface.png",
+      images: ["/MyBoisJerseyConcept2.0.png","/Oasis Hoodie design mockup.png"],
       description: "Modern and responsive website design with focus on user experience.",
     },
     {
@@ -62,15 +64,60 @@ export default function Portfolio() {
     },
   ]
 
+    const portfoliolandscape = [
+    {
+      id: 1,
+      title: "Brand Identity Design",
+      category: "Branding",
+      images: ["/Lemon Drink Re useable can  mockup.png","/Bothflavour.png"],
+      description: "Complete brand identity package including logo, color palette, and brand guidelines.",
+    },
+    {
+      id: 2,
+      title: "Holi Sale",
+      category: "Advertisement",
+      image: "/Holi Festival Sale Website banner.png",
+      description: "web content for a festival mockup",
+    },
+    {
+      id: 3,
+      title: "Print Design Collection",
+      category: "Print",
+      image: "/placeholder-ad1ye.png",
+      description: "Various print materials including brochures, business cards, and posters.",
+    },
+    {
+      id: 4,
+      title: "Mobile App Interface",
+      category: "App Design",
+      image: "/mobile-app-interface.png",
+      description: "Intuitive mobile application interface with modern design principles.",
+    },
+    {
+      id: 5,
+      title: "Packaging Design",
+      category: "Packaging",
+      image: "/premium-packaging.png",
+      description: "Premium product packaging design with sustainable materials focus.",
+    },
+    {
+      id: 6,
+      title: "Social Media Graphics",
+      category: "Digital",
+      image: "/social-media-template.png",
+      description: "Engaging social media graphics and templates for various platforms.",
+    },
+  ]
+
   const skills = [
-    "Adobe Creative Suite",
-    "Figma",
-    "Sketch",
-    "Brand Identity",
-    "UI/UX Design",
-    "Print Design",
-    "Typography",
-    "Color Theory",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe Express",
+    "Canva",
+    "Microsoft Excel",
+    "Power BI",
+    "Graphics Design",
+    "Data Visualization", 
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -208,51 +255,38 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-12 sm:py-20 px-4 sm:px-6 bg-card/50 backdrop-blur-sm relative">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-br from-[#86ffb9]/20 to-[#86eaff]/15 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-tl from-[#86eaff]/25 to-[#86ffb9]/20 rounded-full blur-2xl"></div>
+{/* Portfolio Section */}
+
+<section id="portfolio" className="pt-12 sm:pt-20 pb-3 sm:pb-4 px-4 sm:px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Featured Work</h2>
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
+            A collection of my recent projects that demonstrate diverse design disciplines and creative ideas.
+          </p>
         </div>
 
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Featured Work</h2>
-            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-              A selection of my recent projects showcasing various design disciplines and creative solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {portfolioItems.map((item) => (
-              <Card
-                key={item.id}
-                className="group overflow-hidden border-border hover:shadow-lg transition-all duration-300 hover:border-[#86eaff]/50 bg-background/80 backdrop-blur-sm hover-lift"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    className="w-full h-48 sm:h-64 object-cover transition-all duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#86eaff]/80 via-[#86ffb9]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <ExternalLink className="text-white w-6 h-6 sm:w-8 sm:h-8" />
-                  </div>
-                </div>
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge variant="secondary" className="text-xs bg-[#86ffb9]/20 text-[#86ffb9] border-[#86ffb9]/30">
-                      {item.category}
-                    </Badge>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {portfolioItems.map((item) => (
+            <PortfolioCard key={item.id} item={item} />
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
+
+          {/* Portfolio Section */}
+
+<section id="portfolio" className="pb-12 sm:pb-20 pt-3 sm:pt-4 px-4 sm:px-6">
+      <div className="container mx-auto max-w-6xl">
+    
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {portfoliolandscape.map((item) => (
+            <PortfolioLandscape key={item.id} item={item} />
+          ))}
+        </div>
+      </div>
+    </section>
 
       {/* About Section */}
       <section id="about" className="py-12 sm:py-20 px-4 sm:px-6 relative">
@@ -267,14 +301,14 @@ export default function Portfolio() {
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">About Me</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Hey there! I'm a passionate designer who loves turning ideas into visual stories. With 5+ years of
-                experience, I've learned that great design isn't just about making things look pretty—it's about solving
-                real problems and creating connections.
+                Hi there! I'm a creative designer that enjoys transforming ideas into visual storytelling.
+                With over 2 years of expertise, I understand that great design is more than just aesthetics;
+                it also involves solving real-world problems and connecting people.
               </p>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                When I'm not designing, you'll find me exploring new creative techniques, sketching random ideas, or
-                hunting for inspiration in everyday moments. I believe every project is a chance to push boundaries
-                while keeping things meaningful and functional.
+                When not designing, I enjoy experimenting with new creative approaches,
+                sketching ideas, and finding inspiration in ordinary events. I see every project as
+                an opportunity to push limits while remaining relevant and functional.
               </p>
 
               <div className="mb-8">
@@ -308,6 +342,7 @@ export default function Portfolio() {
         </div>
       </section>
 
+                  
       {/* Contact Section */}
       <section id="contact" className="py-12 sm:py-20 px-4 sm:px-6 bg-card/50 backdrop-blur-sm relative">
         <div className="absolute inset-0 pointer-events-none">
@@ -331,15 +366,15 @@ export default function Portfolio() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4 hover-lift">
                   <Mail className="w-5 h-5 text-[#86eaff]" />
-                  <span className="text-muted-foreground">hello@designer.com</span>
+                  <span className="text-muted-foreground">sayeamin75@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-4 hover-lift">
                   <Phone className="w-5 h-5 text-[#86ffb9]" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                  <span className="text-muted-foreground">+8801648914385</span>
                 </div>
                 <div className="flex items-center gap-4 hover-lift">
                   <MapPin className="w-5 h-5 text-[#86eaff]" />
-                  <span className="text-muted-foreground">New York, NY</span>
+                  <span className="text-muted-foreground">Dhaka, Bangladesh</span>
                 </div>
               </div>
 
@@ -424,9 +459,8 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-6 sm:py-8 px-4 sm:px-6 border-t border-border relative">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-            <div className="text-muted-foreground text-sm mb-4 md:mb-0">© 2024 Portfolio. All rights reserved.</div>
-            <div className="text-muted-foreground text-sm">Designed with passion and precision</div>
+          <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            <div className="text-muted-foreground text-sm mb-4 md:mb-0">© 2025 sayeamin. All rights reserved.</div>
           </div>
         </div>
       </footer>
