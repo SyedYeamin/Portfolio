@@ -228,9 +228,9 @@ export default function Portfolio() {
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-6">
-            Creative
+            Syed
             <span className="bg-gradient-to-r from-[#86eaff] to-[#86ffb9] bg-clip-text text-transparent block">
-              Designer
+              Yeamin
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
