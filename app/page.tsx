@@ -30,7 +30,7 @@ export default function Portfolio() {
     {
       id: 2,
       title: "Jersey and other designs",
-      category: "Clothings",
+      category: "Clothing",
       images: ["/MyBoisJerseyConcept2.0.png","/Oasis Hoodie design mockup.png"],
       description: "",
     },
