@@ -333,7 +333,7 @@ export default function Portfolio() {
 
             <div className="relative">
               <img
-                src="/professional-designer-portrait.png"
+                src="/Yeamin profile (1).png"
                 alt="Designer portrait"
                 className="w-full rounded-lg shadow-lg hover-lift"
               />
